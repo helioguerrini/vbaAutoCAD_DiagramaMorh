@@ -31,9 +31,9 @@ ThisDrawing.ActiveLayer = C3
 ThisDrawing.SetVariable "cecolor", "5"
 'Substitui a circunferência por um ponto caso seu raio seja zero'
 If raioC3 = 0 Then
-Set ponto = ThisDrawing.ModelSpace.AddPoint(centroC3)
+	Set ponto = ThisDrawing.ModelSpace.AddPoint(centroC3)
 Else
-Set circulo = ThisDrawing.ModelSpace.AddCircle(centroC3, raioC3)
+	Set circulo = ThisDrawing.ModelSpace.AddCircle(centroC3, raioC3)
 End If
 'Calculo do centro e raio da circunferência C2'
 centroC2(0) = ((centroC3(0) + raioC3) + Val(SIG03.Text)) / 2
@@ -45,9 +45,9 @@ ThisDrawing.ActiveLayer = C2
 ThisDrawing.SetVariable "cecolor", "4"
 'Substitui a circunferência por um ponto caso seu raio seja zero'
 If raioC2 = 0 Then
-Set ponto = ThisDrawing.ModelSpace.AddPoint(centroC2)
+	Set ponto = ThisDrawing.ModelSpace.AddPoint(centroC2)
 Else
-Set circulo = ThisDrawing.ModelSpace.AddCircle(centroC2, raioC2)
+	Set circulo = ThisDrawing.ModelSpace.AddCircle(centroC2, raioC2)
 End If
 'Calculo do centro e raio da circunferência C1'
 centroC1(0) = ((centroC3(0) - raioC3) + Val(SIG03.Text)) / 2
@@ -59,9 +59,9 @@ ThisDrawing.ActiveLayer = C1
 ThisDrawing.SetVariable "cecolor", "1"
 'Substitui a circunferência por um ponto caso seu raio seja zero'
 If raioC1 = 0 Then
-Set ponto = ThisDrawing.ModelSpace.AddPoint(centroC1)
+	Set ponto = ThisDrawing.ModelSpace.AddPoint(centroC1)
 Else
-Set circulo = ThisDrawing.ModelSpace.AddCircle(centroC1, raioC1)
+	Set circulo = ThisDrawing.ModelSpace.AddCircle(centroC1, raioC1)
 End If
 'Torna a cor branca para as layers correntes'
 ThisDrawing.SetVariable "cecolor", "0"
